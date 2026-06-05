@@ -21,7 +21,7 @@ public class LoginController {
             try {
                 Stage stage = (Stage) usernameField.getScene().getWindow();
                 stage.setScene(new Scene(FXMLLoader.load(
-                    getClass().getResource("/org/proyecto2/fxml/menu.fxml"))));
+                        getClass().getResource("/org/proyecto_zoo_1dam/login.fxml"))));
                 stage.setTitle("Gestión de Animales");
             } catch (Exception e) {
                 e.printStackTrace();
