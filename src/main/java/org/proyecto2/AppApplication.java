@@ -19,7 +19,7 @@ public class AppApplication extends Application {
 }
 
  */
-package org.proyecto_zoo_1dam;
+package org.proyecto2;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
