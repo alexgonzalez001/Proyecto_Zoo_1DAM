@@ -30,9 +30,7 @@ public class AppApplication extends Application {
 
     @Override
     public void start(Stage stage) {
-
         Scene scene = new Scene(new StackPane(), 400, 300);
-
         stage.setTitle("Proyecto Zoo");
         stage.setScene(scene);
         stage.show();
