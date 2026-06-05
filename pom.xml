@@ -56,7 +56,7 @@
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.8</version>                <configuration>
-                    <mainClass>org.proyecto2.AppApplication</mainClass>
+                    <mainClass>org.proyecto_zoo_1dam.AppApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>
