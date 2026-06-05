@@ -19,7 +19,7 @@ public class AppApplication extends Application {
 }
 
  */
-package org.proyecto_zoo_1dam;
+package org.proyecto2;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -30,9 +30,7 @@ public class AppApplication extends Application {
 
     @Override
     public void start(Stage stage) {
-
         Scene scene = new Scene(new StackPane(), 400, 300);
-
         stage.setTitle("Proyecto Zoo");
         stage.setScene(scene);
         stage.show();
