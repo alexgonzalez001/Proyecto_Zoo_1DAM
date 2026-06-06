@@ -11,22 +11,22 @@
 
     <HBox spacing="10" alignment="CENTER">
         <Label text="ID:"/>
-        <TextField fx:id="idField" promptText="ID" maxWidth="80"/>
+        <TextField fx:id="idCampo" promptText="ID" maxWidth="80"/>
     </HBox>
 
     <HBox spacing="10" alignment="CENTER">
         <Label text="Nombre:"/>
-        <TextField fx:id="nombreField" promptText="Nombre" maxWidth="150"/>
+        <TextField fx:id="nombreCampo" promptText="Nombre" maxWidth="150"/>
     </HBox>
 
     <HBox spacing="10" alignment="CENTER">
         <Label text="Fecha (yyyy-MM-dd):"/>
-        <TextField fx:id="fechaField" promptText="2025-01-01" maxWidth="150"/>
+        <TextField fx:id="fechaCampo" promptText="2025-01-01" maxWidth="150"/>
     </HBox>
 
     <HBox spacing="10" alignment="CENTER">
         <Label text="Peso (kg):"/>
-        <TextField fx:id="pesoField" promptText="0.0" maxWidth="150"/>
+        <TextField fx:id="pesoCampo" promptText="0.0" maxWidth="150"/>
     </HBox>
 
     <HBox spacing="10" alignment="CENTER">

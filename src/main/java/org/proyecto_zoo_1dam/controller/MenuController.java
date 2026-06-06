@@ -12,7 +12,7 @@ import java.util.Optional;
 
 public class MenuController {
 
-    @FXML private TextField idField, nombreField, fechaField, pesoField;
+    @FXML private TextField idCampo, nombreCampo, fechaCampo, pesoCampo;
     @FXML private Label statusLabel;
 
     private final AnimalService service = new AnimalServiceImpl();
@@ -20,9 +20,9 @@ public class MenuController {
     @FXML
     public void onCrear() {
         try {
-            Animal a = new Animal(nombreField.getText(),
-                LocalDate.parse(fechaField.getText()),
-                Double.parseDouble(pesoField.getText()));
+            Animal a = new Animal(nombreCampo.getText(),
+                LocalDate.parse(fechaCampo.getText()),
+                Double.parseDouble(pesoCampo.getText()));
             service.create(a);
             statusLabel.setText("Creado con id " + a.getId());
         } catch (Exception e) {
@@ -33,12 +33,12 @@ public class MenuController {
     @FXML
     public void onActualizar() {
         try {
-            Animal a = new Animal(Integer.parseInt(idField.getText()),
-                nombreField.getText(),
-                LocalDate.parse(fechaField.getText()),
-                Double.parseDouble(pesoField.getText()));
-            boolean ok = service.update(a);
-            statusLabel.setText(ok ? "Actualizado" : "No existe el id");
+            Animal a = new Animal(Integer.parseInt(idCampo.getText()),
+                nombreCampo.getText(),
+                LocalDate.parse(fechaCampo.getText()),
+                Double.parseDouble(pesoCampo.getText()));
+            boolean i = service.update(a);
+            statusLabel.setText(i ? "Actualizado" : "No existe el id");
         } catch (Exception e) {
             statusLabel.setText("Error: " + e.getMessage());
         }
@@ -47,8 +47,8 @@ public class MenuController {
     @FXML
     public void onEliminar() {
         try {
-            boolean ok = service.delete(Integer.parseInt(idField.getText()));
-            statusLabel.setText(ok ? "Eliminado" : "No existe el id");
+            boolean i = service.delete(Integer.parseInt(idCampo.getText()));
+            statusLabel.setText(i ? "Eliminado" : "No existe el id");
         } catch (Exception e) {
             statusLabel.setText("Error: " + e.getMessage());
         }
@@ -57,12 +57,12 @@ public class MenuController {
     @FXML
     public void onBuscar() {
         try {
-            Optional<Animal> op = service.findById(Integer.parseInt(idField.getText()));
+            Optional<Animal> op = service.findById(Integer.parseInt(idCampo.getText()));
             if (op.isPresent()) {
                 Animal a = op.get();
-                nombreField.setText(a.getNombre());
-                fechaField.setText(a.getFechaIngreso().toString());
-                pesoField.setText(Double.toString(a.getPesoKg()));
+                nombreCampo.setText(a.getNombre());
+                fechaCampo.setText(a.getFechaIngreso().toString());
+                pesoCampo.setText(Double.toString(a.getPesoKg()));
                 statusLabel.setText("Encontrado");
             } else {
                 statusLabel.setText("No existe el id");
@@ -79,12 +79,12 @@ public class MenuController {
 
     @FXML
     public void onSalir() {
-        ((Stage) idField.getScene().getWindow()).close();
+        ((Stage) idCampo.getScene().getWindow()).close();
     }
 
     private void load(String fxml, String title) {
         try {
-            Stage stage = (Stage) idField.getScene().getWindow();
+            Stage stage = (Stage) idCampo.getScene().getWindow();
             stage.setScene(new Scene(FXMLLoader.load(getClass().getResource(fxml))));
             stage.setTitle(title);
         } catch (Exception ex) {

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.proyecto_zoo_1dam.controller.ListadoController"
+      spacing="10" alignment="CENTER"
+      style="-fx-padding: 40; -fx-background-color: #f0f0f0;">
+
+    <Label text="🦁 Listado de Animales" styleClass="title"/>
+
+    <TableView fx:id="tabla" prefHeight="300" prefWidth="500">
+        <columns>
+            <TableColumn fx:id="colId" text="ID" prefWidth="60"/>
+            <TableColumn fx:id="colNombre" text="Nombre" prefWidth="150"/>
+            <TableColumn fx:id="colFecha" text="Fecha Ingreso" prefWidth="150"/>
+            <TableColumn fx:id="colPeso" text="Peso (kg)" prefWidth="100"/>
+        </columns>
+    </TableView>
+
+    <Button text="Volver" onAction="#onVolver"/>
+
+</VBox>
