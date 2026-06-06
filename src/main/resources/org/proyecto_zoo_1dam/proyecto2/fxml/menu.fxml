@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.proyecto_zoo_1dam.controller.MenuController"
+      spacing="10" alignment="CENTER"
+      style="-fx-padding: 40; -fx-background-color: #f0f0f0;">
+
+    <Label text="🦁 Gestión de Animales" styleClass="title"/>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="ID:"/>
+        <TextField fx:id="idField" promptText="ID" maxWidth="80"/>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="Nombre:"/>
+        <TextField fx:id="nombreField" promptText="Nombre" maxWidth="150"/>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="Fecha (yyyy-MM-dd):"/>
+        <TextField fx:id="fechaField" promptText="2025-01-01" maxWidth="150"/>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="Peso (kg):"/>
+        <TextField fx:id="pesoField" promptText="0.0" maxWidth="150"/>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Crear" onAction="#onCrear"/>
+        <Button text="Actualizar" onAction="#onActualizar"/>
+        <Button text="Eliminar" onAction="#onEliminar"/>
+        <Button text="Buscar" onAction="#onBuscar"/>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Ver Listado" onAction="#onVerListado"/>
+        <Button text="Salir" onAction="#onSalir"/>
+    </HBox>
+
+    <Label fx:id="statusLabel" style="-fx-text-fill: green;"/>
+
+</VBox>
