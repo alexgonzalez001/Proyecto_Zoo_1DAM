@@ -1,4 +1,4 @@
-package org.proyecto2.controller;
+package org.proyecto_zoo_1dam.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

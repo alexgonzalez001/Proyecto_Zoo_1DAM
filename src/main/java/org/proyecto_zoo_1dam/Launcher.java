@@ -1,4 +1,4 @@
-package org.proyecto2;
+package org.proyecto_zoo_1dam;
 
 import javafx.application.Application;
 
